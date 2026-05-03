@@ -616,7 +616,239 @@ footer{
   color: #ffffff !important;
 }
 
+/* RESPONSIVE MOBILE: max-width 768px */
+@media (max-width: 768px) {
+  /* Hero */
+  header h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.2;
+  }
+  header p {
+    font-size: 0.95rem;
+  }
+  .hero-label {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
 
+  /* Tambahkan di luar media query agar semua perangkat responsif */
+.about-img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+  /* Section padding */
+  section {
+    padding: 60px 0 !important;
+  }
+  .section-title h2 {
+    font-size: 1.8rem !important;
+  }
+
+  /* About */
+  .about-text {
+    padding: 20px !important;
+  }
+  .about-img {
+    margin-bottom: 15px;
+  }
+
+  /* Card konservasi */
+  .custom-card img {
+    height: 180px !important;
+  }
+  .custom-card .card-body {
+    padding: 1rem;
+  }
+  .custom-card h5 {
+    font-size: 1.1rem;
+  }
+
+  /* Activity box */
+  .activity-box {
+    padding: 20px;
+  }
+  .activity-box h4 {
+    font-size: 1.2rem;
+  }
+
+  /* Form pengaduan */
+  .complaint-box,
+  .filter-box,
+  .report-summary {
+    padding: 20px !important;
+  }
+  .open-form-btn {
+    padding: 12px 20px !important;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .complaint-box input,
+  .complaint-box select,
+  .complaint-box textarea {
+    font-size: 14px;
+  }
+  .location-box {
+    font-size: 0.85rem;
+  }
+
+  /* Statistik laporan (summary) */
+  .summary-boxes {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
+  }
+  .summary-card {
+    padding: 12px;
+  }
+  .summary-card h4 {
+    font-size: 1.3rem;
+  }
+  .summary-card p {
+    font-size: 0.8rem;
+  }
+
+  /* Card laporan (report-item) */
+  .report-header {
+    padding: 15px !important;
+  }
+  .report-header h4 {
+    font-size: 1rem;
+  }
+  .report-header p {
+    font-size: 0.8rem;
+  }
+  .report-detail {
+    padding: 15px !important;
+  }
+  .report-detail p {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+  .delete-btn {
+    padding: 8px 16px !important;
+    font-size: 0.8rem;
+  }
+
+  /* Tombol Hapus Semua */
+  #reportList .d-flex {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  /* Sidebar berita (sticky dinonaktifkan di HP agar tidak mengganggu) */
+  .sticky-news {
+    position: relative !important;
+    top: 0 !important;
+    max-height: none !important;
+    margin-top: 30px;
+    padding: 20px !important;
+  }
+  .news-card img {
+    height: 140px !important;
+  }
+  .news-content {
+    padding: 12px !important;
+  }
+  .news-content h5 {
+    font-size: 0.95rem;
+  }
+  .news-content p {
+    font-size: 0.8rem;
+  }
+
+  /* Modal gambar */
+  .modal-content img {
+    height: 200px !important;
+  }
+
+  /* Footer & Social icons */
+  footer {
+    padding: 30px 15px !important;
+  }
+  .social-icons a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  footer h4 {
+    font-size: 1.2rem;
+  }
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* NAVBAR SEARCH */
+
+.navbar-search{
+  align-items:center;
+}
+
+.search-wrapper{
+  position:relative;
+}
+
+.search-wrapper i{
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#d8f3dc;
+  font-size:0.9rem;
+}
+
+.search-wrapper input{
+  width:220px;
+  padding:10px 15px 10px 40px;
+
+  border:none;
+  outline:none;
+
+  border-radius:50px;
+
+  background:rgba(255,255,255,0.12);
+
+  color:white;
+
+  backdrop-filter:blur(10px);
+}
+
+.search-wrapper input::placeholder{
+  color:#d8f3dc;
+}
+
+.search-wrapper input:focus{
+  background:rgba(255,255,255,0.2);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .search-wrapper input{
+    width:100%;
+  }
+
+}
+
+/* SOUND BUTTON */
+
+.sound-btn{
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:50%;
+  background:rgba(255,255,255,0.12);
+  color:white;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.sound-btn:hover{
+  background:#2d6a4f;
+  transform:scale(1.05);
+}
 
   </style>
 
@@ -624,16 +856,17 @@ footer{
 
 <body>
 
+<!-- BACKSOUND ALAM -->
+<audio id="natureSound" loop autoplay>
+  <source src="Sound Effect Suara Alam __ nocopyrightsound [_cxLynGJfRE].mp3" type="audio/mpeg">
+</audio>
+
   <!-- NAVBAR -->
-
   <nav class="navbar navbar-expand-lg sticky-top">
-
     <div class="container">
-
       <a class="navbar-brand" href="#">
         ECO DIPLOMACY FORUM
       </a>
-
       <button
         class="navbar-toggler"
         type="button"
@@ -644,8 +877,25 @@ footer{
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-
         <ul class="navbar-nav ms-auto gap-lg-4">
+        <form class="d-flex navbar-search ms-lg-4 mt-3 mt-lg-0">
+  
+     <div class="search-wrapper">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          type="text"
+          id="navbarSearch"
+          placeholder="Cari menu..."
+          onkeyup="searchSection()"
+       >
+        </div>
+        </form>
+      
+        <li class="nav-item d-flex align-items-center">
+  <button onclick="toggleSound()" class="sound-btn">
+    <i class="fa-solid fa-volume-high" id="soundIcon"></i>
+  </button>
+</li>
 
           <li class="nav-item">
             <a class="nav-link" href="#tentang">Tentang</a>
@@ -1002,7 +1252,6 @@ footer{
         <!-- FILTER -->
         <div class="filter-box mt-4 mb-4">
           <label class="mb-2 fw-bold">Pilih Jenis Laporan</label>
-
           <select class="form-select" id="filterCategory" onchange="filterReports()">
             <option value="all">Semua Laporan</option>
             <option value="Ulasan Pengalaman">Ulasan Pengalaman</option>
@@ -1112,7 +1361,7 @@ footer{
   </h4>
 
   <p>
-    © 2026 Taman Nasional Kerinci Seblat
+    © 2026 ECO DIPLOMACY FORUM
   </p>
 
  <div class="social-icons">
@@ -1497,6 +1746,89 @@ function toggleNews(){
   }
 
 }
+
+function searchSection(){
+
+  const keyword =
+  document.getElementById("navbarSearch")
+  .value
+  .toLowerCase();
+
+  const sections = {
+
+    "tentang":"#tentang",
+    "konservasi":"#konservasi",
+    "kegiatan":"#kegiatan",
+    "pengaduan":"#pengaduan",
+    "laporan":"#pengaduan",
+    "berita":"#pengaduan"
+
+  };
+
+  for(let key in sections){
+
+    if(keyword.includes(key)){
+
+      window.location.href = sections[key];
+
+      break;
+
+    }
+
+  }
+
+}
+
+/* SOUND CONTROL */
+
+const natureSound =
+document.getElementById("natureSound");
+
+const soundIcon =
+document.getElementById("soundIcon");
+
+function toggleSound(){
+
+  if(natureSound.paused){
+
+    natureSound.play();
+
+    soundIcon.className =
+    "fa-solid fa-volume-high";
+
+  }
+
+  else{
+
+    natureSound.pause();
+
+    soundIcon.className =
+    "fa-solid fa-volume-xmark";
+
+  }
+
+}
+
+/* AUTO PLAY SOUND SAAT WEB DIBUKA */
+
+window.addEventListener("load", () => {
+
+  natureSound.play()
+    .then(() => {
+
+      soundIcon.className =
+      "fa-solid fa-volume-high";
+
+    })
+    .catch(() => {
+
+      console.log("Autoplay diblokir browser");
+
+    });
+
+});
+
+
 
   </script>
 
