@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Pembalakan Liar di TNKS: Hutan Sumatera Dijarah | EDF</title>
+  <!-- Bootstrap 5 + Ikon + Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 (free icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f7f3;
+      color: #1e2a2e;
+      line-height: 1.65;
+    }
+
+    /* navbar custom - EDF identity */
+    .news-navbar {
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .brand-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.7rem;
+      letter-spacing: -0.3px;
+      color: #1e4a2f;
+      text-decoration: none;
+    }
+
+    .brand-logo i {
+      color: #d9534f;
+      font-size: 1.4rem;
+      margin-right: 6px;
+    }
+
+    .brand-logo span {
+      color: #2b5e2f;
+    }
+
+    .edf-badge {
+      background: #1e4a2f;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 30px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    /* hero article */
+    .hero-tag {
+      display: inline-block;
+      background: #d9534f;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 5px 14px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2.8rem;
+      line-height: 1.2;
+      color: #0f2d1f;
+      letter-spacing: -0.01em;
+    }
+
+    .lead-caption {
+      font-size: 1.2rem;
+      color: #4a5b4e;
+      border-left: 4px solid #d9534f;
+      padding-left: 1.2rem;
+      margin: 1.2rem 0 1.5rem 0;
+      font-weight: 400;
+    }
+
+    .byline {
+      font-size: 0.9rem;
+      color: #6c757d;
+      border-bottom: 1px solid #e2e6e9;
+      padding-bottom: 0.8rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .date-badge {
+      background: #eef2e6;
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .share-icons a {
+      color: #6b7b6e;
+      margin: 0 8px;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+
+    .share-icons a:hover {
+      color: #1e4a2f;
+    }
+
+    /* featured image */
+    .img-container {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 25px -12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1rem;
+    }
+
+    .img-container img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .img-container:hover img {
+      transform: scale(1.01);
+    }
+
+    .caption-photo {
+      font-size: 0.8rem;
+      color: #6f8273;
+      margin-top: 8px;
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+
+    /* content styling */
+    .article-content p {
+      font-size: 1.08rem;
+      margin-bottom: 1.4rem;
+      color: #2c3e2f;
+      font-weight: 400;
+    }
+
+    .highlight-box {
+      background: #f0f5ea;
+      border-left: 5px solid #d9534f;
+      padding: 1.4rem 1.8rem;
+      border-radius: 18px;
+      margin: 2rem 0;
+      font-weight: 500;
+      color: #1e3a2a;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    }
+
+    .highlight-box i {
+      color: #b64926;
+      margin-right: 10px;
+      font-size: 1.4rem;
+      vertical-align: middle;
+    }
+
+    .info-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.2rem 1.6rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e2e8dd;
+      margin: 2rem 0;
+    }
+
+    .info-card h4 {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #1e4a2f;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-card ul {
+      padding-left: 1.2rem;
+    }
+
+    .info-card li {
+      margin-bottom: 0.6rem;
+    }
+
+    .stat-banner {
+      background: linear-gradient(105deg, #1f3d2c 0%, #2f5e3a 100%);
+      border-radius: 28px;
+      padding: 1.8rem 2rem;
+      color: white;
+      margin: 2rem 0 1.8rem;
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    footer {
+      border-top: 1px solid #dee2db;
+      margin-top: 3rem;
+      padding: 2rem 0 1rem;
+      font-size: 0.85rem;
+      color: #5c6e5a;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .lead-caption {
+        font-size: 1rem;
+      }
+      .article-content p {
+        font-size: 1rem;
+      }
+      body {
+        padding: 0 1rem !important;
+      }
+    }
+  </style>
+</head>
+<body class="p-0">
+
+  <!-- Navigation Bar - HANYA BUTTON KEMBALI (SAMA DENGAN SCRIPT TAMBANG LIAR) -->
+  <nav class="news-navbar py-3 sticky-top bg-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between">
+        <a href="#" class="brand-logo text-decoration-none">
+          <i class="fas fa-tree"></i> <span>EDF</span> <span class="edf-badge">ECO DIPLOMACY FORUM</span>
+        </a>
+        <div class="d-flex gap-2 align-items-center">
+          <a href="index.html" class="btn btn-success btn-sm rounded-pill px-3"><i class="fas fa-arrow-left me-1"></i> Kembali</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main article container -->
+  <main class="container py-4 py-lg-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-8">
+
+        <!-- kategori & head -->
+        <div class="hero-tag">
+          <i class="fas fa-gavel me-1"></i> PEMBALAKAN ILEGAL
+        </div>
+        <h1>Pembalakan Liar di TNKS: Ketika Hutan Sumatera Dijarah</h1>
+        <div class="lead-caption">
+          Aktivitas ilegal makin masif di kawasan konservasi; kayu gelondongan hanyut hingga ke pemukiman warga pada akhir 2025. Kerusakan ekosistem dan habitat satwa dilindungi kian parah.
+        </div>
+
+        <!-- meta & share -->
+        <div class="byline">
+          <span><i class="far fa-user-circle me-1"></i> Tim Investigasi EDF</span>
+          <span class="date-badge"><i class="far fa-calendar-alt me-1"></i> Sabtu, 1 Februari 2025</span>
+          <span><i class="fas fa-map-marker-alt me-1 text-danger"></i> Pesisir Selatan, Sumatera Barat & Rejang Lebong, Bengkulu</span>
+          <div class="share-icons ms-auto">
+            <span class="text-muted small me-2">Bagikan:</span>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Gambar utama -->
+        <div class="img-container">
+          <img src="https://ksdae.kehutanan.go.id/storages/d391821d3c1c4fcb9c6fcfdff3ba10a8.webp"
+               alt="Kawasan hutan TNKS yang terdampak pembalakan liar" class="img-fluid w-100">
+        </div>
+        <div class="caption-photo">
+          <i class="fas fa-camera"></i> Kawasan hutan TNKS yang terdampak aktivitas pembalakan liar. | Dokumentasi EDF/Ditjen KSDAE
+        </div>
+
+        <!-- article utama -->
+        <div class="article-content">
+          <p><strong>Taman Nasional Kerinci Seblat (TNKS)</strong> — Kawasan hutan tropis yang menjadi salah satu paru-paru Sumatera kembali terdampak ulah tangan tak bertanggung jawab. Maraknya aktivitas pembalakan liar di dalam zona konservasi TNKS memasuki babak baru. Berdasarkan laporan lapangan yang dihimpun EDF sepanjang awal 2026, aktivitas ini terutama terjadi di titik-titik rawan seperti wilayah <strong>Lunang Sako, Pesisir Selatan, Sumatera Barat, serta kawasan Rejang Lebong di Bengkulu</strong>.</p>
+
+          <p>Para pelaku pembalakan ilegal diketahui menebang puluhan hingga ratusan batang pohon bernilai ekonomi tinggi seperti <strong>Meranti, Borneo, dan Mersawa</strong>. Metode yang digunakan tergolong terstruktur: kayu gelondongan hasil tebangan dihanyutkan melalui aliran sungai-sungai kecil, terutama saat curah hujan meningkat. Dengan cara itu, aparat kesulitan melakukan pengawasan karena arus deras membawa kayu hingga ke hilir dalam tempo singkat.</p>
+
+          <!-- highlight box fakta -->
+          <div class="highlight-box">
+            <i class="fas fa-exclamation-triangle"></i> <strong>Fakta mencolok:</strong> Pada akhir tahun 2025, warga di beberapa kecamatan di Sumatera melaporkan puluhan batang kayu gelondongan hanyut terbawa banjir bandang. Kayu-kayu tersebut diduga hasil tebangan liar dari hulu TNKS yang luput dari razia.
+          </div>
+
+          <p>Dampak ekologis dari praktik ini tidak hanya mengurangi tutupan hutan, tetapi juga memicu kerusakan rantai makanan dan habitat satwa dilindungi seperti harimau sumatera, gajah sumatera, serta tapir. Laporan dari Balai Besar Taman Nasional Kerinci Seblat (BBTNKS) menunjukkan penurunan kualitas habitat di beberapa sektor karena fragmentasi yang ditimbulkan oleh jalur penebangan liar.</p>
+
+          <p>Masyarakat yang tinggal di daerah aliran sungai juga merasakan langsung dampak hidrologis: banjir bandang dan longsor semakin sering terjadi ketika musim hujan tiba. Hilangnya fungsi serapan air oleh tegakan hutan primer menyebabkan tingginya debit air sungai hingga merendam lahan pertanian dan pemukiman warga.</p>
+
+          <!-- Info card : jenis kayu ilegal -->
+          <div class="info-card">
+            <h4><i class="fas fa-tree text-success me-2"></i> Komoditas kayu ilegal yang mendominasi</h4>
+            <ul>
+              <li><strong>Meranti Merah</strong> – Harga tinggi di pasar gelap, sering diekspor secara sembunyi.</li>
+              <li><strong>Kayu Borneo / Kapur</strong> – Banyak dipakai untuk bahan bangunan ilegal.</li>
+              <li><strong>Pulai & Balam</strong> – Ditebang untuk memenuhi permintaan lokal dan luar negeri.</li>
+            </ul>
+            <p class="mb-0 text-muted mt-2 small">Diperkirakan kerugian ekonomi dan lingkungan dari praktik ini mencapai miliaran rupiah per tahun, belum termasuk biaya pemulihan ekosistem.</p>
+          </div>
+
+          <p>Merespons situasi genting ini, tim gabungan dari Balai Besar TNKS bersama aparat penegak hukum, TNI, dan Polri terus menggencarkan operasi patroli skala besar. Pada kurun waktu Januari-Maret 2026, sedikitnya 12 titik diduga sebagai lokasi penampungan kayu ilegal telah disegel. Puluhan gergaji mesin dan perlengkapan penebangan turut disita. Selain itu, patroli rutin udara dan darat juga dilakukan untuk menyisir kawasan terpencil yang sulit dijangkau.</p>
+
+          <p>Kepala BBTNKS dalam keterangan persnya menyatakan bahwa pihaknya tidak akan mentolerir aktivitas pembalakan liar. “Kami terus berkoordinasi dengan Polisi Kehutanan dan jajaran kejaksaan. Penegakan hukum harus tegas agar ada efek jera. Pelaku yang tertangkap akan dijerat dengan UU Nomor 18 Tahun 2013 tentang Pencegahan dan Pemberantasan Perusakan Hutan,” ujarnya.</p>
+
+          <!-- stat banner dengan data pembalakan (mirip gaya tambang liar) -->
+          <div class="stat-banner d-flex flex-wrap justify-content-between align-items-center">
+            <div class="text-center text-md-start mb-3 mb-md-0">
+              <div class="stat-number"><i class="fas fa-chart-line me-2"></i> +73%</div>
+              <div class="small opacity-75">Peningkatan titik panas (hotspot) indikasi pembalakan liar pada 2025</div>
+            </div>
+            <div class="text-center text-md-start mb-3 mb-md-0">
+              <div class="stat-number"><i class="fas fa-tree me-2"></i> 12+</div>
+              <div class="small opacity-75">Lokasi penampungan kayu ilegal disegel (Jan-Mar 2026)</div>
+            </div>
+            <div class="text-center text-md-start">
+              <div class="stat-number"><i class="fas fa-water me-2"></i> 12 kec.</div>
+              <div class="small opacity-75">Terdampak banjir bandang & longsor akibat deforestasi</div>
+            </div>
+          </div>
+
+          <p>Selain upaya penindakan, pendekatan preventif juga digencarkan melalui program pemberdayaan masyarakat desa penyangga. Melalui skema perhutanan sosial dan pengembangan ekowisata berbasis konservasi, diharapkan warga lokal memiliki alternatif ekonomi tanpa merusak hutan. Namun, tantangan di lapangan masih sangat besar. Akses ilegal ke dalam hutan, suplai kayu ke industri kecil, serta jaringan penadah yang terorganisir masih sulit diungkap tuntas.</p>
+
+          <p>Peneliti dari Forum Konservasi Sumatera menyebutkan bahwa tanpa dukungan teknologi monitoring canggih seperti drone thermal dan citra satelit harian, mustahil menutup celah pencurian kayu. “Kami mengapresiasi langkah BBTNKS menggunakan data spasial untuk mendeteksi perubahan tutupan hutan secara cepat. Tapi perlu ada integrasi data antar provinsi mengingat TNKS membentang di empat provinsi,” ujar peneliti senior itu.</p>
+
+          <p>Sebagai cagar biosfer dan warisan dunia, TNKS menyimpan kekayaan plasma nutfah yang tak ternilai. Hilangnya beberapa hektar hutan setiap bulan karena pembalakan liar dapat memicu kepunahan lokal flora endemik. Para aktivis lingkungan mendesak pemerintah pusat meningkatkan alokasi anggaran operasional di taman nasional serta menambah jumlah ranger yang bersenjata lengkap.</p>
+
+          <p>Tim gabungan dari BBTNKS dan aparat penegak hukum telah berkomitmen untuk terus melakukan patroli rutin, penyisiran kawasan hutan, serta penyegelan area yang diduga menjadi lokasi penampungan kayu hasil kejahatan. Dalam konferensi pers terakhir, mereka menunjukkan puluhan kubik kayu bulat yang disita dari gudang penyimpanan ilegal di Lunang. Kasus-kasus tersebut kini dalam proses penyidikan oleh polisi setempat.</p>
+
+          <p>EDF (Eco Diplomacy Forum) mengapresiasi langkah cepat aparat di lapangan, sekaligus mendorong penguatan sistem monitoring berbasis masyarakat. Selain itu, penegakan hukum harus menyentuh aktor intelektual dan jaringan perdagangan kayu ilegal. Dengan semangat menjaga kelestarian kawasan konservasi TNKS, kolaborasi antara aparat, masyarakat, dan media independen sangat diperlukan.</p>
+
+          <div class="mt-5 pt-2 border-top">
+            <div class="d-flex gap-3 align-items-center flex-wrap">
+              <i class="fas fa-tags text-muted"></i>
+              <span class="badge bg-light text-dark me-1 rounded-pill">#StopIllegalLogging</span>
+              <span class="badge bg-light text-dark me-1 rounded-pill">#SaveTNKS</span>
+              <span class="badge bg-light text-dark rounded-pill">#HutanSumatera</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- penutup / kartu redaksi (mirip dengan halaman tambang liar) -->
+        <div class="card border-0 bg-white mt-5 shadow-sm rounded-4">
+          <div class="card-body p-4">
+            <div class="d-flex gap-3 align-items-start flex-wrap flex-sm-nowrap">
+              <div class="bg-danger bg-opacity-10 p-3 rounded-circle">
+                <i class="fas fa-leaf fs-3 text-danger"></i>
+              </div>
+              <div>
+                <h6 class="card-subtitle mb-1 text-muted">Laporan Eksklusif EDF</h6>
+                <h5 class="card-title">Investigasi Pembalakan Liar di Jalur Hijau TNKS</h5>
+                <p class="card-text small">Artikel ini disusun berdasarkan data patroli BBTNKS, wawancara dengan petugas lapangan, serta analisis citra satelit. Eco Diplomacy Forum berkomitmen mengungkap kejahatan lingkungan demi masa depan konservasi Indonesia.</p>
+                <div class="mt-2">
+                  <span class="badge bg-secondary bg-opacity-25 text-dark me-2"><i class="far fa-clock me-1"></i> Diterbitkan: 06 Mei 2026</span>
+                  <span class="badge bg-secondary bg-opacity-25 text-dark"><i class="fas fa-edit me-1"></i> Editor: Redaksi EDF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer EDF (sama persis dengan halaman tambang liar) -->
+  <footer class="container-fluid mt-5 pt-4" style="background: #f5f7f2;">
+    <div class="container py-3">
+      <div class="row gy-3">
+        <div class="col-md-6">
+          <span class="brand-logo small"><i class="fas fa-tree"></i> <span>EDF</span> <span style="font-size:0.7rem;">ECO DIPLOMACY FORUM</span></span>
+          <p class="mt-2 small text-secondary">Mendorong kebijakan konservasi berbasis sains, melindungi keanekaragaman hayati Indonesia dari kepunahan.</p>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-semibold">Tautan</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-decoration-none text-secondary">Tentang EDF</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Program Konservasi</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Kontak & Mitra</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-semibold">Ikuti Kami</h6>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-secondary"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-secondary"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="text-secondary"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p class="mt-2 small text-secondary">© 2026 ECO DIPLOMACY FORUM - ID</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Tambang Liar di TNKS: Ancaman Merkuri dan Kerusakan Habitat | EDF</title>
+  <!-- Bootstrap 5 + Ikon + Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 (free icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f7f3;
+      color: #1e2a2e;
+      line-height: 1.65;
+    }
+
+    /* navbar custom - EDF identity */
+    .news-navbar {
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .brand-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.7rem;
+      letter-spacing: -0.3px;
+      color: #1e4a2f;
+      text-decoration: none;
+    }
+
+    .brand-logo i {
+      color: #d9534f;
+      font-size: 1.4rem;
+      margin-right: 6px;
+    }
+
+    .brand-logo span {
+      color: #2b5e2f;
+    }
+
+    .edf-badge {
+      background: #1e4a2f;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 30px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    /* hero article */
+    .hero-tag {
+      display: inline-block;
+      background: #d9534f;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 5px 14px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2.8rem;
+      line-height: 1.2;
+      color: #0f2d1f;
+      letter-spacing: -0.01em;
+    }
+
+    .lead-caption {
+      font-size: 1.2rem;
+      color: #4a5b4e;
+      border-left: 4px solid #d9534f;
+      padding-left: 1.2rem;
+      margin: 1.2rem 0 1.5rem 0;
+      font-weight: 400;
+    }
+
+    .byline {
+      font-size: 0.9rem;
+      color: #6c757d;
+      border-bottom: 1px solid #e2e6e9;
+      padding-bottom: 0.8rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .date-badge {
+      background: #eef2e6;
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .share-icons a {
+      color: #6b7b6e;
+      margin: 0 8px;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+
+    .share-icons a:hover {
+      color: #1e4a2f;
+    }
+
+    /* featured image */
+    .img-container {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 25px -12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1rem;
+    }
+
+    .img-container img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .img-container:hover img {
+      transform: scale(1.01);
+    }
+
+    .caption-photo {
+      font-size: 0.8rem;
+      color: #6f8273;
+      margin-top: 8px;
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+
+    /* content styling */
+    .article-content p {
+      font-size: 1.08rem;
+      margin-bottom: 1.4rem;
+      color: #2c3e2f;
+      font-weight: 400;
+    }
+
+    .highlight-box {
+      background: #f0f5ea;
+      border-left: 5px solid #d9534f;
+      padding: 1.4rem 1.8rem;
+      border-radius: 18px;
+      margin: 2rem 0;
+      font-weight: 500;
+      color: #1e3a2a;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    }
+
+    .highlight-box i {
+      color: #b64926;
+      margin-right: 10px;
+      font-size: 1.4rem;
+      vertical-align: middle;
+    }
+
+    .info-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.2rem 1.6rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e2e8dd;
+      margin: 2rem 0;
+    }
+
+    .info-card h4 {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #1e4a2f;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-card ul {
+      padding-left: 1.2rem;
+    }
+
+    .info-card li {
+      margin-bottom: 0.6rem;
+    }
+
+    .stat-banner {
+      background: linear-gradient(105deg, #1f3d2c 0%, #2f5e3a 100%);
+      border-radius: 28px;
+      padding: 1.8rem 2rem;
+      color: white;
+      margin: 2rem 0 1.8rem;
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    footer {
+      border-top: 1px solid #dee2db;
+      margin-top: 3rem;
+      padding: 2rem 0 1rem;
+      font-size: 0.85rem;
+      color: #5c6e5a;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .lead-caption {
+        font-size: 1rem;
+      }
+      .article-content p {
+        font-size: 1rem;
+      }
+      body {
+        padding: 0 1rem !important;
+      }
+    }
+  </style>
+</head>
+<body class="p-0">
+
+  <!-- Navigation Bar - HANYA BUTTON KEMBALI -->
+  <nav class="news-navbar py-3 sticky-top bg-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between">
+        <a href="#" class="brand-logo text-decoration-none">
+          <i class="fas fa-hard-hat"></i> <span>EDF</span> <span class="edf-badge">ECO DIPLOMACY FORUM</span>
+        </a>
+        <div class="d-flex gap-2 align-items-center">
+          <a href="index.html" class="btn btn-success btn-sm rounded-pill px-3"><i class="fas fa-arrow-left me-1"></i> Kembali</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main article container -->
+  <main class="container py-4 py-lg-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-8">
+
+        <!-- kategori & head -->
+        <div class="hero-tag">
+          <i class="fas fa-hard-hat me-1"></i> TAMBANG ILEGAL
+        </div>
+        <h1>Tambang Liar di TNKS: Racun Merkuri dan Kerusakan Habitat Satwa Endemik</h1>
+        <div class="lead-caption">
+          Aktivitas Pertambangan Emas Tanpa Izin (PETI) kian masif di kawasan konservasi Jambi. Merkuri mencemari sungai, habitat satwa dilindungi seperti harimau sumatera, gajah, dan kelinci sumatera terancam.
+        </div>
+
+        <!-- meta & share -->
+        <div class="byline">
+          <span><i class="far fa-user-circle me-1"></i> Tim Investigasi EDF</span>
+          <span class="date-badge"><i class="far fa-calendar-alt me-1"></i> Selasa, 9 Juni 2025</span>
+          <span><i class="fas fa-map-marker-alt me-1 text-danger"></i> TNKS, Jambi - Sumatera</span>
+          <div class="share-icons ms-auto">
+            <span class="text-muted small me-2">Bagikan:</span>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Gambar utama -->
+        <div class="img-container">
+          <img src="https://awsimages.detik.net.id/visual/2021/02/25/tambang-emas-ilegal-di-sulteng-longsor-apabdee-mari_169.jpeg?w=650&q=80"
+               alt="Aktivitas tambang emas ilegal di kawasan hutan konservasi" class="img-fluid w-100">
+        </div>
+        <div class="caption-photo">
+          <i class="fas fa-camera"></i> Lubang-lubang bekas tambang liar dan sedimentasi parah di aliran sungai kawasan TNKS. | Dokumentasi EDF/Tim Patroli
+        </div>
+
+        <!-- article utama -->
+        <div class="article-content">
+          <p><strong>Taman Nasional Kerinci Seblat (TNKS)</strong> — Ancaman serius kembali menghantui salah satu kawasan konservasi terpenting di Sumatera. Aktivitas <strong>Pertambangan Emas Tanpa Izin (PETI)</strong> atau tambang liar semakin masif dan terstruktur, terutama di wilayah <strong>Jambi</strong>. Berdasarkan laporan lapangan yang dihimpun EDF bersama Balai Besar TNKS, titik-titik penambangan ilegal ditemukan di sejumlah lokasi kritis seperti <strong>Sungai Penetai, Sungai Serpeh, Sungai Sihijau, dan Batu Reben</strong>.</p>
+
+          <p>Para penambang liar menggunakan metode sederhana namun sangat destruktif: mengeruk material dasar sungai, menggali tebing, dan menggunakan <strong>merkuri (air raksa)</strong> untuk memisahkan butiran emas dari tanah dan batuan. Limbah merkuri yang dibuang langsung ke aliran sungai menjadi bom waktu bagi ekosistem perairan dan kesehatan masyarakat di sekitar kawasan hutan.</p>
+
+          <!-- highlight box fakta -->
+          <div class="highlight-box">
+            <i class="fas fa-skull-crossbones"></i> <strong>Ancaman Merkuri:</strong> Penggunaan merkuri pada tambang liar tidak hanya meracuni ikan dan biota sungai, tetapi juga menguap dan terhirup penambang. Dalam jangka panjang, merkuri menyebabkan kerusakan saraf, ginjal, dan gangguan tumbuh kembang anak-anak di desa penyangga.
+          </div>
+
+          <p>Dampak ekologis dari tambang liar sangat luas. Kawasan hutan yang menjadi habitat <strong>Harimau Sumatera (Panthera tigris sumatrae), Gajah Sumatera (Elephas maximus sumatranus), dan Kelinci Sumatera (Nesolagus netscheri)</strong>—salah satu kelinci paling langka di dunia—mengalami fragmentasi parah. Lubang-lubang tambang yang ditinggalkan, jalur akses ilegal, serta kebisingan aktivitas penambangan memaksa satwa liar menjauh dari wilayah jelajah alaminya.</p>
+
+          <!-- info card: lokasi tambang liar -->
+          <div class="info-card">
+            <h4><i class="fas fa-map-marked-alt text-danger me-2"></i> Zona Rawan Tambang Liar di TNKS</h4>
+            <ul>
+              <li><strong>Sungai Penetai</strong> – Aktivitas pengerukan skala besar, ditemukan puluhan mesin dompeng.</li>
+              <li><strong>Sungai Serpeh</strong> – Konsentrasi merkuri tertinggi di perairan, ikan lokal mulai menghilang.</li>
+              <li><strong>Sungai Sihijau</strong> – Penambangan di bantaran sungai yang memicu erosi dan longsor.</li>
+              <li><strong>Batu Reben</strong> – Tambang bawah tanah sederhana, berpotensi amblesan.</li>
+            </ul>
+            <p class="mb-0 text-muted mt-2 small">Sepanjang tahun 2025, tim gabungan menemukan lebih dari 15 titik tambang liar aktif di kawasan TNKS Jambi.</p>
+          </div>
+
+          <p>Selain kerusakan habitat dan pencemaran, tambang liar juga memicu deforestasi besar-besaran. Pembukaan lahan untuk akses jalan dan lokasi penambangan menghilangkan tutupan hutan primer. Data citra satelit menunjukkan peningkatan lahan kritis di sekitar aliran sungai dalam dua tahun terakhir. Hilangnya vegetasi juga memperparah risiko banjir bandang dan longsor saat musim hujan.</p>
+
+          <p>Aparat gabungan dari Balai Besar TNKS, Kepolisian Resort, serta TNI terus melakukan operasi penertiban dan patroli rutin. Dalam kurun waktu Januari hingga April 2026, sedikitnya 8 lokasi tambang liar telah disegel, puluhan unit mesin dompeng (sedot pasir/emas) dimusnahkan, dan sejumlah alat berat disita. Namun, kendala medan yang sulit serta jaringan penambang yang kerap berpindah lokasi menjadi tantangan tersendiri.</p>
+
+          <!-- stat banner dengan data tambang -->
+          <div class="stat-banner d-flex flex-wrap justify-content-between align-items-center">
+            <div class="text-center text-md-start mb-3 mb-md-0">
+              <div class="stat-number"><i class="fas fa-hard-hat me-2"></i> 15+</div>
+              <div class="small opacity-75">Titik tambang liar teridentifikasi 2025-2026</div>
+            </div>
+            <div class="text-center text-md-start mb-3 mb-md-0">
+              <div class="stat-number"><i class="fas fa-droplet me-2"></i> 87%</div>
+              <div class="small opacity-75">Sampel sungai terdeteksi merkuri di zona PETI</div>
+            </div>
+            <div class="text-center text-md-start">
+              <div class="stat-number"><i class="fas fa-tree me-2"></i> 320+</div>
+              <div class="small opacity-75">Hektar lahan hutan terdampak tambang liar</div>
+            </div>
+          </div>
+
+          <p>Dalam jumpa pers yang digelar pekan lalu, Kepala Balai TNKS menegaskan komitmen penuh untuk memberantas tambang liar. "Kami tidak akan memberi ruang bagi praktik ilegal yang merusak kawasan konservasi. Penambangan tanpa izin tidak hanya melanggar UU No. 3 Tahun 2020 tentang Pertambangan Mineral dan Batubara, tetapi juga UU Konservasi. Sanksi pidana penjara dan denda miliaran rupiah menanti para pelaku," tegasnya.</p>
+
+          <p>Selain pendekatan penindakan, upaya pencegahan juga terus digalakkan. Tim konservasi bersama masyarakat desa penyangga melakukan sosialisasi dampak merkuri dan menawarkan program mata pencaharian alternatif seperti budidaya madu hutan, ekowisata, dan pertanian organik. Namun, daya pikat ekonomi dari tambang emas masih sangat tinggi, terutama saat harga emas dunia melambung.</p>
+
+          <p>Peneliti dari Forum Konservasi Sumatera memperingatkan bahwa jika tambang liar tidak segera dihentikan, kerusakan TNKS akan mencapai titik tak terbalikkan (irreversible). "Merkuri yang mengendap di sedimen akan bertahan puluhan tahun. Ikan dan biota sungai akan musnah, satwa besar kehilangan sumber air bersih. Kita sedang berlomba dengan waktu," ujar peneliti senior yang enggan disebutkan namanya.</p>
+
+          <p>EDF (Eco Diplomacy Forum) mengapresiasi langkah cepat aparat di lapangan, sekaligus mendorong penguatan teknologi pengawasan seperti penggunaan drone thermal dan sensor kualitas air jarak jauh. Selain itu, penegakan hukum harus menyasar rantai pasok dan jaringan pendanaan di balik tambang liar, bukan hanya penambang kecil di lapangan.</p>
+
+          <p>Kawasan Taman Nasional Kerinci Seblat adalah warisan dunia dan salah satu benteng terakhir keanekaragaman hayati Sumatera. Melindunginya dari tambang liar, pembalakan, dan perburuan adalah tanggung jawab bersama. Masyarakat diimbau untuk segera melaporkan indikasi aktivitas tambang ilegal kepada pihak berwenang melalui kanal pengaduan yang tersedia.</p>
+
+          <div class="mt-5 pt-2 border-top">
+            <div class="d-flex gap-3 align-items-center flex-wrap">
+              <i class="fas fa-tags text-muted"></i>
+              <span class="badge bg-light text-dark me-1 rounded-pill">#StopTambangLiar</span>
+              <span class="badge bg-light text-dark me-1 rounded-pill">#SaveTNKS</span>
+              <span class="badge bg-light text-dark rounded-pill">#MerkuriBeracun</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- penutup / kartu redaksi -->
+        <div class="card border-0 bg-white mt-5 shadow-sm rounded-4">
+          <div class="card-body p-4">
+            <div class="d-flex gap-3 align-items-start flex-wrap flex-sm-nowrap">
+              <div class="bg-danger bg-opacity-10 p-3 rounded-circle">
+                <i class="fas fa-chalkboard-user fs-3 text-danger"></i>
+              </div>
+              <div>
+                <h6 class="card-subtitle mb-1 text-muted">Laporan Khusus EDF</h6>
+                <h5 class="card-title">Investigasi Tambang Ilegal di Jalur Hijau TNKS</h5>
+                <p class="card-text small">Artikel ini disusun berdasarkan data operasi penertiban BBTNKS, hasil uji sampel sungai, serta wawancara dengan petugas Polhut dan masyarakat terdampak. Eco Diplomacy Forum berkomitmen mengungkap kejahatan lingkungan demi masa depan konservasi Indonesia.</p>
+                <div class="mt-2">
+                  <span class="badge bg-secondary bg-opacity-25 text-dark me-2"><i class="far fa-clock me-1"></i> Diterbitkan: 09 Mei 2026</span>
+                  <span class="badge bg-secondary bg-opacity-25 text-dark"><i class="fas fa-edit me-1"></i> Editor: Redaksi EDF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer EDF -->
+  <footer class="container-fluid mt-5 pt-4" style="background: #f5f7f2;">
+    <div class="container py-3">
+      <div class="row gy-3">
+        <div class="col-md-6">
+          <span class="brand-logo small"><i class="fas fa-hard-hat"></i> <span>EDF</span> <span style="font-size:0.7rem;">ECO DIPLOMACY FORUM</span></span>
+          <p class="mt-2 small text-secondary">Mendorong kebijakan konservasi berbasis sains, melindungi keanekaragaman hayati Indonesia dari kepunahan.</p>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-semibold">Tautan</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-decoration-none text-secondary">Tentang EDF</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Program Konservasi</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Kontak & Mitra</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-semibold">Ikuti Kami</h6>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-secondary"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-secondary"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="text-secondary"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p class="mt-2 small text-secondary">© 2026 ECO DIPLOMACY FORUM - ID</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

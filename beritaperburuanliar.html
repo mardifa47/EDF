@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Perburuan Liar di TNKS: Satwa Dilindungi Terus Terancam | EDF</title>
+  <!-- Bootstrap 5 + Ikon + Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 (free icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f7f3;
+      color: #1e2a2e;
+      line-height: 1.65;
+    }
+
+    /* navbar custom - EDF identity */
+    .news-navbar {
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .brand-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.7rem;
+      letter-spacing: -0.3px;
+      color: #1e4a2f;
+      text-decoration: none;
+    }
+
+    .brand-logo i {
+      color: #d9534f;
+      font-size: 1.4rem;
+      margin-right: 6px;
+    }
+
+    .brand-logo span {
+      color: #2b5e2f;
+    }
+
+    .edf-badge {
+      background: #1e4a2f;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 30px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .btn-outline-forest {
+      border: 1.5px solid #2b5e2f;
+      color: #2b5e2f;
+      border-radius: 40px;
+      padding: 6px 20px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline-forest:hover {
+      background-color: #2b5e2f;
+      color: white;
+      border-color: #2b5e2f;
+    }
+
+    /* hero article */
+    .hero-tag {
+      display: inline-block;
+      background: #d9534f;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 5px 14px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2.8rem;
+      line-height: 1.2;
+      color: #0f2d1f;
+      letter-spacing: -0.01em;
+    }
+
+    .lead-caption {
+      font-size: 1.2rem;
+      color: #4a5b4e;
+      border-left: 4px solid #d9534f;
+      padding-left: 1.2rem;
+      margin: 1.2rem 0 1.5rem 0;
+      font-weight: 400;
+    }
+
+    .byline {
+      font-size: 0.9rem;
+      color: #6c757d;
+      border-bottom: 1px solid #e2e6e9;
+      padding-bottom: 0.8rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .date-badge {
+      background: #eef2e6;
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .share-icons a {
+      color: #6b7b6e;
+      margin: 0 8px;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+
+    .share-icons a:hover {
+      color: #1e4a2f;
+    }
+
+    /* featured image */
+    .img-container {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 25px -12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1rem;
+    }
+
+    .img-container img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .img-container:hover img {
+      transform: scale(1.01);
+    }
+
+    .caption-photo {
+      font-size: 0.8rem;
+      color: #6f8273;
+      margin-top: 8px;
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+
+    /* content styling */
+    .article-content p {
+      font-size: 1.08rem;
+      margin-bottom: 1.4rem;
+      color: #2c3e2f;
+      font-weight: 400;
+    }
+
+    .highlight-box {
+      background: #f0f5ea;
+      border-left: 5px solid #d9534f;
+      padding: 1.4rem 1.8rem;
+      border-radius: 18px;
+      margin: 2rem 0;
+      font-weight: 500;
+      color: #1e3a2a;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    }
+
+    .highlight-box i {
+      color: #b64926;
+      margin-right: 10px;
+      font-size: 1.4rem;
+      vertical-align: middle;
+    }
+
+    .info-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.2rem 1.6rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e2e8dd;
+      margin: 2rem 0;
+    }
+
+    .info-card h4 {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #1e4a2f;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-card ul {
+      padding-left: 1.2rem;
+    }
+
+    .info-card li {
+      margin-bottom: 0.6rem;
+    }
+
+    .stat-banner {
+      background: linear-gradient(105deg, #1f3d2c 0%, #2f5e3a 100%);
+      border-radius: 28px;
+      padding: 1.8rem 2rem;
+      color: white;
+      margin: 2rem 0 1.8rem;
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    footer {
+      border-top: 1px solid #dee2db;
+      margin-top: 3rem;
+      padding: 2rem 0 1rem;
+      font-size: 0.85rem;
+      color: #5c6e5a;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .lead-caption {
+        font-size: 1rem;
+      }
+      .article-content p {
+        font-size: 1rem;
+      }
+      body {
+        padding: 0 1rem !important;
+      }
+    }
+  </style>
+</head>
+<body class="p-0">
+
+  <!-- Navigation Bar - EDF version -->
+  <nav class="news-navbar py-3 sticky-top bg-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between">
+        <a href="#" class="brand-logo text-decoration-none">
+          <i class="fas fa-paw"></i> <span>EDF</span> <span class="edf-badge">ECO DIPLOMACY FORUM</span>
+        </a>
+        <div class="d-flex gap-2 align-items-center">
+          <a href="index.html" class="btn btn-success btn-sm rounded-pill px-3"><i class="fas fa-arrow-left me-1"></i> Kembali</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main article container -->
+  <main class="container py-4 py-lg-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-8">
+
+        <!-- kategori & head -->
+        <div class="hero-tag">
+          <i class="fas fa-skull-crossbones me-1"></i> PERBURUAN ILEGAL
+        </div>
+        <h1>Perburuan Liar di TNKS: Jerat Maut Mengancam Harimau Sumatera & Satwa Dilindungi</h1>
+        <div class="lead-caption">
+          Aktivitas perburuan masih marak di kawasan konservasi, diperparah dengan meningkatnya perburuan rusa dan kijang saat Ramadan. Populasi satwa endemik semakin kritis.
+        </div>
+
+        <!-- meta & share -->
+        <div class="byline">
+          <span><i class="far fa-user-circle me-1"></i> Tim Investigasi EDF</span>
+          <span class="date-badge"><i class="far fa-calendar-alt me-1"></i> Kamis, 8 Mei 2025</span>
+          <span><i class="fas fa-map-marker-alt me-1 text-danger"></i> Kerinci Seblat, Sumatera</span>
+          <div class="share-icons ms-auto">
+            <span class="text-muted small me-2">Bagikan:</span>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Gambar utama -->
+        <div class="img-container">
+          <img src="https://ppi.unas.ac.id/wp-content/uploads/2024/07/tiga-ekor-harimau-sumatera-tewas-terkena-jerat-di-aceh-timur-4_169.jpeg"
+               alt="Harimau Sumatera menjadi korban jerat di kawasan hutan Sumatera" class="img-fluid w-100">
+        </div>
+        <div class="caption-photo">
+          <i class="fas fa-camera"></i> Harimau Sumatera (Panthera tigris sumatrae) yang menjadi korban jerat di kawasan konservasi. | Dokumentasi EDF/Rimba Wildlife
+        </div>
+
+        <!-- article utama -->
+        <div class="article-content">
+          <p><strong>Taman Nasional Kerinci Seblat (TNKS)</strong> — Ancaman terhadap keanekaragaman hayati di salah satu kawasan konservasi terbesar di Sumatera kian memprihatinkan. Aktivitas perburuan liar yang terus berlangsung secara sembunyi-sembunyi telah mengancam kelangsungan hidup satwa-satwa dilindungi, terutama <strong>Harimau Sumatera (Panthera tigris sumatrae)</strong>, rusa, dan kijang. Berdasarkan pemantauan tim gabungan serta laporan dari Balai Besar TNKS, kasus jerat meningkat tajam selama beberapa bulan terakhir.</p>
+
+          <p>Data yang dihimpun EDF menunjukkan modus operandi para pemburu kian beragam. Mereka menggunakan <strong>jerat kawat baja</strong> yang dipasang di jalur satwa, <strong>jerat nilon</strong> yang sulit terdeteksi, serta senapan angin modifikasi untuk memburu hewan buruan. Yang mengkhawatirkan, jerat-jerat ini tidak hanya menyasar rusa atau kijang, tetapi juga seringkali menjerat harimau sumatera, tapir, dan beruang madu sebagai bycatch (tangkap sampingan).</p>
+
+          <!-- highlight box fakta -->
+          <div class="highlight-box">
+            <i class="fas fa-chart-simple"></i> <strong>Lonjakan saat Ramadan:</strong> Patroli lapangan mencatat peningkatan aktivitas perburuan hingga 40% selama bulan Ramadan. Hal ini dipicu oleh tingginya permintaan daging rusa dan kijang untuk konsumsi serta tradisi berburu di sejumlah komunitas.
+          </div>
+
+          <p>Dampak jangka panjang dari perburuan ilegal sangat nyata. Populasi Harimau Sumatera—yang saat ini diperkirakan tersisa kurang dari 400 individu di alam liar—mengalami tekanan berat. Setiap individu yang mati akibat jerat atau perburuan adalah pukulan telak bagi upaya konservasi. Selain itu, rusa dan kijang sebagai mangsa alami harimau juga ikut berkurang drastis, mengganggu rantai makanan dan keseimbangan ekosistem hutan hujan tropis.</p>
+
+          <!-- info card: metode perburuan -->
+          <div class="info-card">
+            <h4><i class="fas fa-tools text-danger me-2"></i> Metode Perburuan yang Teridentifikasi</h4>
+            <ul>
+              <li><strong>Jerat Kawat Baja (slip snare)</strong> – Paling mematikan, dapat membunuh satwa dalam hitungan jam.</li>
+              <li><strong>Jerat Nilon / Tali Tambang</strong> – Sulit terlihat oleh ranger, sering dipasang berjajar di jalur satwa.</li>
+              <li><strong>Senapan Angin &amp; Senapan Rakitan</strong> – Digunakan untuk berburu primata, burung, dan kijang.</li>
+              <li><strong>Perangkap Lubang</strong> – Ditemukan di beberapa zona konservasi untuk menangkap satwa besar.</li>
+            </ul>
+            <p class="mb-0 text-muted mt-2 small">Sepanjang tahun 2025, tim BBTNKS menemukan dan memusnahkan lebih dari 250 jerat di wilayah TNKS.</p>
+          </div>
+
+          <p>Pihak pengelola Taman Nasional bersama aparat kepolisian dan masyarakat sekitar terus menggencarkan upaya perlindungan. Setiap minggu, tim <strong>Rhino Patrol Unit</strong> dan <strong>Harimau Patrol</strong> menyusuri titik-titik rawan perburuan. Mereka tidak hanya memusnahkan jerat yang ditemukan, tetapi juga memasang kamera trap untuk memantau pergerakan satwa dan mendeteksi aktivitas mencurigakan. Selain itu, pendekatan sosial kepada desa-desa penyangga juga dilakukan untuk mengurangi ketergantungan masyarakat pada perburuan.</p>
+
+          <p>Dalam konferensi pers baru-baru ini, Kepala Balai TNKS menyatakan bahwa pihaknya telah meningkatkan kerja sama dengan Kejaksaan Negeri setempat untuk memberikan efek jera. "Kami tidak segan menindak tegas para pelaku perburuan liar. Ancaman hukuman maksimal 5 tahun penjara dan denda Rp 100 juta sesuai UU Konservasi Sumber Daya Alam Hayati dan Ekosistemnya. Selain itu, jerat yang ditemukan langsung kami musnahkan di lapangan," tegasnya.</p>
+
+          <!-- stat banner sederhana (tanpa ajakan laporan) -->
+          <div class="stat-banner d-flex flex-wrap justify-content-between align-items-center">
+            <div class="text-center text-md-start mb-3 mb-md-0">
+              <div class="stat-number"><i class="fas fa-tiger me-2"></i> <400</div>
+              <div class="small opacity-75">Perkiraan populasi Harimau Sumatera di alam liar</div>
+            </div>
+            <div class="text-center text-md-start mb-3 mb-md-0">
+              <div class="stat-number"><i class="fas fa-skull me-2"></i> 250+</div>
+              <div class="small opacity-75">Jerat dimusnahkan selama 2025 di TNKS</div>
+            </div>
+            <div class="text-center text-md-start">
+              <div class="stat-number"><i class="fas fa-calendar-week me-2"></i> +40%</div>
+              <div class="small opacity-75">Peningkatan perburuan saat Ramadan</div>
+            </div>
+          </div>
+
+          <p>Konflik antara manusia dan satwa liar juga kerap memperparah situasi. Beberapa kasus menunjukkan bahwa petani yang ladangnya rusak akibat gangguan babi hutan atau kijang kerap memasang jerat sembarangan, yang pada akhirnya menjerat harimau atau spesies non-target. EDF mendorong adanya program mitigasi konflik berbasis komunitas agar masyarakat tidak perlu menggunakan cara-cara ilegal.</p>
+
+          <p>Selain kehilangan nyawa satwa, perburuan liar juga merusak ekosistem wisata alam. TNKS merupakan salah satu destinasi unggulan ekowisata Sumatera. Jika satwa ikonik seperti harimau sumatera terus berkurang, nilai konservasi dan ekonomi dari pariwisata alam akan runtuh. Sudah saatnya seluruh elemen bersatu untuk melindungi warisan yang tak ternilai ini.</p>
+
+          <p>Ke depan, EDF berharap pemerintah memperkuat regulasi dan menambah personel Polisi Kehutanan (Polhut) di kawasan TNKS. Teknologi deteksi dini seperti sensor akustik dan drone thermal perlu diimplementasikan secara lebih luas. Perlindungan yang efektif terhadap satwa liar tidak hanya menyelamatkan spesies langka, tetapi juga menjaga keseimbangan alam bagi generasi mendatang.</p>
+
+          <div class="mt-5 pt-2 border-top">
+            <div class="d-flex gap-3 align-items-center flex-wrap">
+              <i class="fas fa-tags text-muted"></i>
+              <span class="badge bg-light text-dark me-1 rounded-pill">#StopPerburuanLiar</span>
+              <span class="badge bg-light text-dark me-1 rounded-pill">#SaveHarimauSumatera</span>
+              <span class="badge bg-light text-dark rounded-pill">#TNKS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- penutup / kartu redaksi tanpa ajakan laporan -->
+        <div class="card border-0 bg-white mt-5 shadow-sm rounded-4">
+          <div class="card-body p-4">
+            <div class="d-flex gap-3 align-items-start flex-wrap flex-sm-nowrap">
+              <div class="bg-danger bg-opacity-10 p-3 rounded-circle">
+                <i class="fas fa-binoculars fs-3 text-danger"></i>
+              </div>
+              <div>
+                <h6 class="card-subtitle mb-1 text-muted">Laporan Eksklusif EDF</h6>
+                <h5 class="card-title">Mengawal Konservasi di Garis Depan</h5>
+                <p class="card-text small">Artikel ini disusun berdasarkan data patroli BBTNKS, wawancara dengan petugas lapangan, serta observasi di kawasan TNKS. Environmental Defense Fund (EDF) berkomitmen menyuarakan perlindungan satwa liar dan habitatnya.</p>
+                <div class="mt-2">
+                  <span class="badge bg-secondary bg-opacity-25 text-dark me-2"><i class="far fa-clock me-1"></i> Diterbitkan: 08 Mei 2026</span>
+                  <span class="badge bg-secondary bg-opacity-25 text-dark"><i class="fas fa-edit me-1"></i> Editor: Redaksi EDF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer EDF -->
+  <footer class="container-fluid mt-5 pt-4" style="background: #f5f7f2;">
+    <div class="container py-3">
+      <div class="row gy-3">
+        <div class="col-md-6">
+          <span class="brand-logo small"><i class="fas fa-paw"></i> <span>EDF</span> <span style="font-size:0.7rem;">ECO DIPLOMACY FORUM</span></span>
+          <p class="mt-2 small text-secondary">Mendorong kebijakan konservasi berbasis sains, melindungi keanekaragaman hayati Indonesia dari kepunahan.</p>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-semibold">Tautan</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-decoration-none text-secondary">Tentang EDF</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Program Konservasi</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Kontak & Mitra</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-semibold">Ikuti Kami</h6>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-secondary"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-secondary"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="text-secondary"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p class="mt-2 small text-secondary">© 2026 ECO DIPLOMACY FORUM - ID</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+```
